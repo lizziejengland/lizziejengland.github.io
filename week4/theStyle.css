@@ -40,4 +40,5 @@ div {
 .card {
     flex: 0 0 auto;
     color: black;
+    font-size: large;
 }
