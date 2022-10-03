@@ -42,3 +42,22 @@ div {
     color: black;
     font-size: large;
 }
+
+.thirdhand {
+    width: 130px;
+    height: 195px;
+    position: relative;
+    display: inline-block;
+}
+
+.thirdhand .img-top{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.thirdhand:hover .img-top {
+    display: inline;
+}
