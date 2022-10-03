@@ -1,4 +1,17 @@
 
+
+body {
+    background-color: lavenderblush;
+}
+
+h1 {
+    text-align: center;
+}
+
+div {
+    text-align: center;
+}
+
 .container1 {
 
     position: relative;
