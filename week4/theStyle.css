@@ -6,7 +6,9 @@ body {
 
 h1 {
     text-align: center;
+    color: pink;
 }
+
 
 div {
     text-align: center;
@@ -20,19 +22,22 @@ div {
 
 }
 
-.container2 {
-
-    position: relative;
-    text-align: center;
-    color: black;
-
-}
-
 .row {
     display: flex;
   }
   
-  .column {
-    flex: 50%;
+.column {
+    flex: 33.33%;
     padding: 5px;
   }
+
+.scrolling {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.card {
+    flex: 0 0 auto;
+    color: black;
+}
