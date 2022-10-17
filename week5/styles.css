@@ -1,0 +1,18 @@
+.column {
+  display: flex;
+}
+
+.scrolling {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.container1 {
+  position: relative;
+}
+
+.card {
+  flex: 0 0 auto;
+}
+  
