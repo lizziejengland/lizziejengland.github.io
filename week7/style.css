@@ -9,8 +9,6 @@ h1{
 }
 
 .picmove {
-
-  width:10px;
   animation-name: rotate;
   animation-duration: 0.7s;
   animation-iteration-count: infinite;
