@@ -1,27 +1,26 @@
 body {
-    background-color: blue;
+    background-color: pink;
 
 }
 
 h1{
     text-align: center;
-    color: pink;
+    color: hotpink;
 }
 
-.box {
-    background-color: rebeccapurple;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    animation-name: rotate;
-    animation-duration: 0.7s;
-    animation-iteration-count: infinite;
-    animation-play-state: paused;
-  }
-  
-  .box:hover {
+.picmove {
+
+  width:10px;
+  animation-name: rotate;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+.picmove:hover {
     animation-play-state: running;
-  }
+}
+  
   
   @keyframes rotate {
     0% {
