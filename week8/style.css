@@ -1,0 +1,40 @@
+body {
+    background-image: url("background.gif");
+    background-size: cover;
+}
+
+h1{
+  color: rgb(159, 159, 237);
+  font-size: 100px;
+  font-family:monospace;
+}
+
+h2{
+  background-color: pink;
+  color: rgb(159, 159, 237);
+  font-size: 20px;
+  font-family:monospace;
+  padding: 5px;
+  
+}
+
+#img1 {
+  border: 15px solid pink;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.column {
+  flex: 50%;
+  padding: 5px;
+}
+
+#navigate {
+  background-color: pink;
+}
+
+
+
