@@ -55,5 +55,9 @@ h2{
   font-size: larger;
 }
 
+@media screen and (min-width: 30em) and (orientation: landscape) {
+  /* … */
+}
+
 
 
