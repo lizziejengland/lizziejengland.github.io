@@ -55,5 +55,9 @@ h2{
   font-size: larger;
 }
 
-
+@media (min-color: 8) {
+  p {
+    color: #24ba13;
+  }
+}
 
