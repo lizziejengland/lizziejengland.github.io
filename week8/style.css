@@ -223,7 +223,24 @@ h2{
     cursor: pointer;
 }
   
-  
+#imagesboy{
+  animation-name: rotate;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+} 
+
+#imagesboy:hover {
+  animation-play-state: running;
+}
 
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
