@@ -1,5 +1,12 @@
 
 
 body {
-    background-color: lightblue;
+    background-image: url("rainbow.gif");
+    background-size: cover;
+}
+
+h1 {
+    font-size: 100px;
+    text-align: center;
+    color: blueviolet;
 }
