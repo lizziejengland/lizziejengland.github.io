@@ -22,3 +22,17 @@ function changeColor(){
     
 
 }
+let thePara;
+
+function getReal(){
+    console.log("ya real")
+    //https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
+  
+    thePara =  document.createElement("p");
+   const theContent = document.createTextNode("what the waht?")
+    thePara.appendChild(theContent);
+    const thisDiv = document.querySelector("div");
+    document.body.insertBefore(thePara,thisDiv)
+}
+
+document.getElementById('fire').addEventListener('click', getReal)
