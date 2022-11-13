@@ -1,38 +1,26 @@
-console.log("the message!")
-
-
-let theUser = "rebecca"
-let theNumber = 800000
-console.log(theUser + " " + theNumber)
-// legacey variable -- var
-// ES6: let , const
 
 const theButton = document.querySelector('button')
 console.log(theButton)
 let theMain = document.querySelector('main')
 let theTxt = document.getElementById('theText')
 
-theButton.addEventListener('click', changeColor)
-
-
-function changeColor(){
-    console.log("horray!")
-    theTxt.textContent = "you clicked the button!"
-    theMain.style.backgroundColor = "yellow"
-    
-
-}
-let thePara;
-
-function getReal(){
-    console.log("ya real")
-    //https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
+const unicornSpinning = [
+    { transform: 'rotate(0) scale(1)' },
+    { transform: 'rotate(360deg) scale(0)' }
+  ];
   
-    thePara =  document.createElement("p");
-   const theContent = document.createTextNode("what the waht?")
-    thePara.appendChild(theContent);
-    const thisDiv = document.querySelector("div");
-    document.body.insertBefore(thePara,thisDiv)
+  const unicornTiming = {
+    duration: 4000,
+    iterations: 1,
+  }
+
+theButton.addEventListener('click', changeText)
+
+
+function changeText(){
+    console.log("slay!")
+    theTxt.textContent = "uh oh...i think you might have killed her..."
+    theButton.animate(unicornSpinning, unicornTiming);
+
 }
 
-document.getElementById('fire').addEventListener('click', getReal)
