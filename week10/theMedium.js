@@ -1,6 +1,5 @@
 let popup = document.getElementById("popup")
 const theButton = document.querySelector('button')
-const twoButton = document.querySelector('button')
 console.log(theButton)
 let theMain = document.querySelector('main')
 let theTxt = document.getElementById('theText')
