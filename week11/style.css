@@ -1,7 +1,7 @@
 body{
     background-color: rgb(85, 84, 84);
     background-image: url('GRAY.png'), url("background.png"), url("planes.png");
-    background-size: 850px;
+    background-size: cover;
 }
 
 h1{
