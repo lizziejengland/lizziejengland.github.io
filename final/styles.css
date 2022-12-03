@@ -1,0 +1,18 @@
+
+body{
+    background-color: rgb(151, 198, 239);
+}
+
+button {
+    justify-content: center;
+    text-align: center;
+    width: 25%;
+    height: 25%;
+    margin-top: 10px;
+    padding: 10px 0;
+    background: white;
+    border: 0;
+    outline: none;
+    font-size: 30px;
+    border-radius: 15px;
+}
