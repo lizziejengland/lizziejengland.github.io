@@ -4,98 +4,207 @@ let theMain = document.querySelector('main')
 let theImg = document.getElementById('theImg')
 
 var pics1 = new Array ();
-/* var pics2 = new Array ();
-var pics3 = new Array ();
-var pics4 = new Array ();
-var pics5 = new Array ();
-var pics6 = new Array ();
-var pics7 = new Array ();
-var pics8 = new Array ();
-var pics9 = new Array ();
-var pics10 = new Array (); */
 
-for(x=0; x < 100; x++){
-    var num = 0;
-    num++;
-    pics1[num]= new Image;
-    var str = num.toString();
-    pics1[num].src = 'assets/' + str + '.png';
-}
-
-/* for(x=0; x < 10; x++){
-    var num = 0;
-    num++;
-    pics2[num]= new Image;
-    var str = num.toString();
-    pics2[num].src = 'assets/' + str + '.png';
-
-}
-
-
-for(x=0; x < 10; x++){
-    var num = 0;
-    num++;
-    pics3[num]= new Image;
-    var str = num.toString();
-    pics3[num].src = 'assets/' + str + '.png';
-
-}
-for(x=0; x < 10; x++){
-    var num = 0;
-    num++;
-    pics4[num]= new Image;
-    var str = num.toString();
-    pics4[num].src = 'assets/' + str + '.png';
-
-}
-for(x=0; x < 10; x++){
-    var num = 0;
-    num++;
-    pics5[num]= new Image;
-    var str = num.toString();
-    pics5[num].src = 'assets/' + str + '.png';
-
-}
-for(x=0; x < 101; x++){
-    var num = 0;
-    num++;
-    pics6[num]= new Image;
-    var str = num.toString();
-    pics6[num].src = 'assets/' + str + '.png';
-
-}
-for(x=0; x < 101; x++){
-    var num = 0;
-    num++;
-    pics7[num]= new Image;
-    var str = num.toString();
-    pics7[num].src = 'assets/' + str + '.png';
-
-}
-for(x=0; x < 10; x++){
-    var num = 0;
-    num++;
-    pics8[num]= new Image;
-    var str = num.toString();
-    pics8[num].src = 'assets/' + str + '.png';
-
-}
-for(x=0; x < 10; x++){
-    var num = 0;
-    num++;
-    pics9[num]= new Image;
-    var str = num.toString();
-    pics9[num].src = 'assets/' + str + '.png';
-
-}
-for(x=0; x < 10; x++){
-    var num = 0;
-    num++;
-    pics10[num]= new Image;
-    var str = num.toString();
-    pics10[num].src = 'assets/' + str + '.png';
-
-} */
+pics1[0] = new Image;
+pics1[0].src = 'assets/1.png';
+pics1[1] = new Image;
+pics1[1].src = 'assets/2.png';
+pics1[2] = new Image;
+pics1[2].src = 'assets/3.png';
+pics1[3] = new Image;
+pics1[3].src = 'assets/4.png';
+pics1[4] = new Image;
+pics1[4].src = 'assets/5.png';
+pics1[5] = new Image;
+pics1[5].src = 'assets/6.png';
+pics1[6] = new Image;
+pics1[6].src = 'assets/7.png';
+pics1[7] = new Image;
+pics1[7].src = 'assets/8.png';
+pics1[8] = new Image;
+pics1[8].src = 'assets/9.png';
+pics1[9] = new Image;
+pics1[9].src = 'assets/10.png';
+pics1[10] = new Image;
+pics1[10].src = 'assets/11.png';
+pics1[11] = new Image;
+pics1[11].src = 'assets/12.png';
+pics1[12] = new Image;
+pics1[12].src = 'assets/13.png';
+pics1[13] = new Image;
+pics1[13].src = 'assets/14.png';
+pics1[14] = new Image;
+pics1[14].src = 'assets/15.png';
+pics1[15] = new Image;
+pics1[15].src = 'assets/16.png';
+pics1[16] = new Image;
+pics1[16].src = 'assets/17.png';
+pics1[17] = new Image;
+pics1[17].src = 'assets/18.png';
+pics1[18] = new Image;
+pics1[18].src = 'assets/19.png';
+pics1[19] = new Image;
+pics1[19].src = 'assets/20.png';
+pics1[20] = new Image;
+pics1[20].src = 'assets/21.png';
+pics1[21] = new Image;
+pics1[21].src = 'assets/22.png';
+pics1[22] = new Image;
+pics1[22].src = 'assets/23.png';
+pics1[23] = new Image;
+pics1[23].src = 'assets/24.png';
+pics1[24] = new Image;
+pics1[24].src = 'assets/25.png';
+pics1[25] = new Image;
+pics1[25].src = 'assets/26.png';
+pics1[26] = new Image;
+pics1[26].src = 'assets/27.png';
+pics1[27] = new Image;
+pics1[27].src = 'assets/28.png';
+pics1[28] = new Image;
+pics1[28].src = 'assets/29.png';
+pics1[29] = new Image;
+pics1[29].src = 'assets/30.png';
+pics1[30] = new Image;
+pics1[30].src = 'assets/31.png';
+pics1[31] = new Image;
+pics1[31].src = 'assets/32.png';
+pics1[32] = new Image;
+pics1[32].src = 'assets/33.png';
+pics1[33] = new Image;
+pics1[33].src = 'assets/34.png';
+pics1[34] = new Image;
+pics1[34].src = 'assets/35.png';
+pics1[35] = new Image;
+pics1[35].src = 'assets/36.png';
+pics1[36] = new Image;
+pics1[36].src = 'assets/37.png';
+pics1[37] = new Image;
+pics1[37].src = 'assets/38.png';
+pics1[38] = new Image;
+pics1[38].src = 'assets/39.png';
+pics1[39] = new Image;
+pics1[39].src = 'assets/40.png';
+pics1[40] = new Image;
+pics1[40].src = 'assets/41.png';
+pics1[41] = new Image;
+pics1[41].src = 'assets/42.png';
+pics1[42] = new Image;
+pics1[42].src = 'assets/43.png';
+pics1[43] = new Image;
+pics1[43].src = 'assets/44.png';
+pics1[44] = new Image;
+pics1[44].src = 'assets/45.png';
+pics1[45] = new Image;
+pics1[45].src = 'assets/46.png';
+pics1[46] = new Image;
+pics1[46].src = 'assets/47.png';
+pics1[47] = new Image;
+pics1[47].src = 'assets/48.png';
+pics1[48] = new Image;
+pics1[48].src = 'assets/49.png';
+pics1[49] = new Image;
+pics1[49].src = 'assets/50.png';
+pics1[50] = new Image;
+pics1[50].src = 'assets/51.png';
+pics1[51] = new Image;
+pics1[51].src = 'assets/52.png';
+pics1[52] = new Image;
+pics1[52].src = 'assets/53.png';
+pics1[53] = new Image;
+pics1[53].src = 'assets/54.png';
+pics1[54] = new Image;
+pics1[54].src = 'assets/55.png';
+pics1[55] = new Image;
+pics1[55].src = 'assets/56.png';
+pics1[56] = new Image;
+pics1[56].src = 'assets/57.png';
+pics1[57] = new Image;
+pics1[57].src = 'assets/58.png';
+pics1[58] = new Image;
+pics1[58].src = 'assets/59.png';
+pics1[59] = new Image;
+pics1[59].src = 'assets/60.png';
+pics1[60] = new Image;
+pics1[60].src = 'assets/61.png';
+pics1[61] = new Image;
+pics1[61].src = 'assets/62.png';
+pics1[62] = new Image;
+pics1[62].src = 'assets/63.png';
+pics1[63] = new Image;
+pics1[63].src = 'assets/64.png';
+pics1[64] = new Image;
+pics1[64].src = 'assets/65.png';
+pics1[65] = new Image;
+pics1[65].src = 'assets/66.png';
+pics1[66] = new Image;
+pics1[66].src = 'assets/67.png';
+pics1[67] = new Image;
+pics1[67].src = 'assets/68.png';
+pics1[68] = new Image;
+pics1[68].src = 'assets/69.png';
+pics1[69] = new Image;
+pics1[69].src = 'assets/70.png';
+pics1[70] = new Image;
+pics1[70].src = 'assets/71.png';
+pics1[71] = new Image;
+pics1[71].src = 'assets/72.png';
+pics1[72] = new Image;
+pics1[72].src = 'assets/73.png';
+pics1[73] = new Image;
+pics1[73].src = 'assets/74.png';
+pics1[74] = new Image;
+pics1[74].src = 'assets/75.png';
+pics1[75] = new Image;
+pics1[75].src = 'assets/76.png';
+pics1[76] = new Image;
+pics1[76].src = 'assets/77.png';
+pics1[77] = new Image;
+pics1[77].src = 'assets/78.png';
+pics1[78] = new Image;
+pics1[78].src = 'assets/79.png';
+pics1[79] = new Image;
+pics1[79].src = 'assets/80.png';
+pics1[80] = new Image;
+pics1[80].src = 'assets/81.png';
+pics1[81] = new Image;
+pics1[81].src = 'assets/82.png';
+pics1[82] = new Image;
+pics1[82].src = 'assets/83.png';
+pics1[83] = new Image;
+pics1[83].src = 'assets/84.png';
+pics1[84] = new Image;
+pics1[84].src = 'assets/85.png';
+pics1[85] = new Image;
+pics1[85].src = 'assets/86.png';
+pics1[86] = new Image;
+pics1[86].src = 'assets/87.png';
+pics1[87] = new Image;
+pics1[87].src = 'assets/88.png';
+pics1[88] = new Image;
+pics1[88].src = 'assets/89.png';
+pics1[89] = new Image;
+pics1[89].src = 'assets/90.png';
+pics1[90] = new Image;
+pics1[90].src = 'assets/91.png';
+pics1[91] = new Image;
+pics1[91].src = 'assets/92.png';
+pics1[92] = new Image;
+pics1[92].src = 'assets/93.png';
+pics1[93] = new Image;
+pics1[93].src = 'assets/94.png';
+pics1[94] = new Image;
+pics1[94].src = 'assets/95.png';
+pics1[95] = new Image;
+pics1[95].src = 'assets/96.png';
+pics1[96] = new Image;
+pics1[96].src = 'assets/97.png';
+pics1[97] = new Image;
+pics1[97].src = 'assets/98.png';
+pics1[98] = new Image;
+pics1[98].src = 'assets/99.png';
+pics1[99] = new Image;
+pics1[99].src = 'assets/100.png';
 
 
 theButton.addEventListener('click', getImages);
@@ -103,31 +212,4 @@ theButton.addEventListener('click', getImages);
 function getImages (){
     var rand = pics1[Math.floor(Math.random() * pics1.length)];
     document.getElementById("theImg").src = rand.src;
-
-    /* var randed = pics2[Math.floor(Math.random() * pics2.length)];
-    document.getElementById("theImg1").src = randed.src;
-
-    var rands = pics3[Math.floor(Math.random() * pics3.length)];
-    document.getElementById("theImg2").src = rands.src;
-
-    var rander = pics4[Math.floor(Math.random() * pics4.length)];
-    document.getElementById("theImg3").src = rander.src;
-
-    var randy = pics5[Math.floor(Math.random() * pics5.length)];
-    document.getElementById("theImg4").src = randy.src;
-
-    var randt = pics6[Math.floor(Math.random() * pics6.length)];
-    document.getElementById("theImg5").src = randt.src;
-
-    var randst = pics7[Math.floor(Math.random() * pics7.length)];
-    document.getElementById("theImg6").src = randst.src;
-
-    var randeds = pics8[Math.floor(Math.random() * pics8.length)];
-    document.getElementById("theImg7").src = randeds.src;
-
-    var randsy = pics9[Math.floor(Math.random() * pics9.length)];
-    document.getElementById("theImg8").src = randsy.src;
-
-    var randser = pics10[Math.floor(Math.random() * pics10.length)];
-    document.getElementById("theImg9").src = randser.src; */
 }
