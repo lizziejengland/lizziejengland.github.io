@@ -1,7 +1,12 @@
-const theButton = document.querySelector('button')
-console.log(theButton)
-let theMain = document.querySelector('main')
-let theImg = document.getElementById('theImg')
+//https://youtu.be/C22hQKE_32c for drag and drop tutorial
+
+
+const theButton = document.querySelector('button');
+console.log(theButton);
+let theMain = document.querySelector('main');
+let theImg = document.getElementById('theImg');
+ const fill = document.querySelector('.fill');
+const empty = document.querySelector('.empty');
 
 var pics1 = new Array ();
 
@@ -210,6 +215,101 @@ pics1[99].src = 'assets/100.png';
 theButton.addEventListener('click', getImages);
 
 function getImages (){
-    var rand = pics1[Math.floor(Math.random() * pics1.length)];
+    var pics2 = pics1.slice()
+
+    var random_num = Math.floor(Math.random() * pics2.length)
+    var rand = pics2[random_num];
     document.getElementById("theImg").src = rand.src;
+    pics2.splice(random_num, 1)
+
+    random_num = Math.floor(Math.random() * pics2.length)
+    var randed = pics2[random_num];
+    document.getElementById("theImg1").src = randed.src;
+    pics2.splice(random_num, 1)
+
+    random_num = Math.floor(Math.random() * pics2.length)
+    var randeds = pics2[random_num];
+    document.getElementById("theImg2").src = randeds.src;
+    pics2.splice(random_num, 1)
+
+    random_num = Math.floor(Math.random() * pics2.length)
+    var randedy = pics2[random_num];
+    document.getElementById("theImg3").src = randedy.src;
+    pics2.splice(random_num, 1)
+
+    random_num = Math.floor(Math.random() * pics2.length)
+    var rands = pics2[random_num];
+    document.getElementById("theImg4").src = rands.src;
+    pics2.splice(random_num, 1)
+
+    random_num = Math.floor(Math.random() * pics2.length)
+    var randed = pics2[random_num];
+    document.getElementById("theImg5").src = randed.src;
+    pics2.splice(random_num, 1)
+
+    random_num = Math.floor(Math.random() * pics2.length)
+    var randy = pics2[random_num];
+    document.getElementById("theImg6").src = randy.src;
+    pics2.splice(random_num, 1)
+
+    random_num = Math.floor(Math.random() * pics2.length)
+    var rander = pics2[random_num];
+    document.getElementById("theImg7").src = rander.src;
+    pics2.splice(random_num, 1)
+
+    random_num = Math.floor(Math.random() * pics2.length)
+    var randt = pics2[random_num];
+    document.getElementById("theImg8").src = randt.src;
+    pics2.splice(random_num, 1)
+
+    random_num = Math.floor(Math.random() * pics2.length)
+    var randup = pics2[random_num];
+    document.getElementById("theImg9").src = randup.src;
+    pics2.splice(random_num, 1)
+  }
+
+  //Fill listeners
+fill.addEventListener('dragstart', dragStart);
+fill.addEventListener('dragend', dragEnd);
+
+//loop thru empties and call drag events but dont actually u only have one empty
+
+empty.addEventListener('dragover', dragOver);
+empty.addEventListener('dragenter', dragEnter);
+empty.addEventListener('dragLeave', dragLeave);
+empty.addEventListener('drop', dragDrop);
+
+
+
+//Drag Functions
+function dragStart(){
+  this.className += ' hold';
+  setTimeout(() => this.className = 'invisible', 0);
+  
+
+}
+
+function dragEnd(){
+  this.className = 'fill'
+
+}
+
+function dragOver(e){
+  e.preventDefault();
+
+}
+
+function dragEnter(e){
+  e.preventDefault();
+  this.className += ' hovered';
+}
+
+function dragLeave(){
+  this.className = 'empty';
+}
+
+function dragDrop(){
+  this.className = 'empty';
+  this.append(fill);
+
 }

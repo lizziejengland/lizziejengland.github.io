@@ -6,8 +6,8 @@ body{
 button {
     justify-content: center;
     text-align: center;
-    width: 25%;
-    height: 25%;
+    width: 15%;
+    height: 15%;
     margin-top: 10px;
     padding: 10px 0;
     background: white;
@@ -15,4 +15,35 @@ button {
     outline: none;
     font-size: 30px;
     border-radius: 15px;
+}
+
+img{
+    display: inline-block;
+}
+
+.empty{
+    display: inline-block;
+    height: 400px;
+    width: 100%;
+    margin: 10px;
+    border: 3px salmon solid;
+    background-color: white;
+}
+
+/*.fill{
+    display: inline-flex
+} */
+
+.hold {
+    border: solid gray 4px;
+}
+
+.hover {
+    background-color: aqua;
+    border-style: dashed;
+
+}
+
+.invisible{
+    display: none;
 }
