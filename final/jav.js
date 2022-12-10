@@ -5,8 +5,8 @@ const theButton = document.querySelector('button');
 console.log(theButton);
 let theMain = document.querySelector('main');
 let theImg = document.getElementById('theImg');
- const fill = document.querySelector('.fill');
-const empty = document.querySelector('.empty');
+const fill = document.querySelectorAll('.fill');
+const empties = document.querySelectorAll('.empty');
 
 var pics1 = new Array ();
 
@@ -268,48 +268,56 @@ function getImages (){
     pics2.splice(random_num, 1)
   }
 
-  //Fill listeners
-fill.addEventListener('dragstart', dragStart);
-fill.addEventListener('dragend', dragEnd);
+//Fill listeners
+for (const image of fill){
+  image.addEventListener('dragstart', dragStart)
+  image.addEventListener('dragend', dragEnd)
+}
 
 //loop thru empties and call drag events but dont actually u only have one empty
 
-empty.addEventListener('dragover', dragOver);
-empty.addEventListener('dragenter', dragEnter);
-empty.addEventListener('dragLeave', dragLeave);
-empty.addEventListener('drop', dragDrop);
-
+for (const empty of empties) {
+  empty.addEventListener('dragover', dragOver);
+  empty.addEventListener('dragenter', dragEnter);
+  empty.addEventListener('dragLeave', dragLeave);
+  empty.addEventListener('drop', dragDrop);
+}
 
 
 //Drag Functions
 function dragStart(){
   this.className += ' hold';
   setTimeout(() => this.className = 'invisible', 0);
-  
+  console.log(this)
 
 }
 
 function dragEnd(){
   this.className = 'fill'
-
+  console.log('end')
 }
 
 function dragOver(e){
   e.preventDefault();
-
+  console.log('over')
 }
 
 function dragEnter(e){
   e.preventDefault();
   this.className += ' hovered';
+  console.log('enter')
 }
 
 function dragLeave(){
   this.className = 'empty';
+  console.log('leave')
 }
 
 function dragDrop(){
   this.className = 'empty';
-  this.append(fill);
-
+  for (const image of fill) {
+    if (image.className == 'invisible') {
+      this.append(image)
+    }
+  }
 }

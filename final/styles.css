@@ -28,11 +28,13 @@ img{
     margin: 10px;
     border: 3px salmon solid;
     background-color: white;
+
+
 }
 
-/*.fill{
+.fill{
     display: inline-flex
-} */
+} 
 
 .hold {
     border: solid gray 4px;
