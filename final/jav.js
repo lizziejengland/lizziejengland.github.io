@@ -383,7 +383,7 @@ function dragDrop(e){
   });
   $("#download").on('click', function () {
     var imgageData = getCanvas.toDataURL("image/png");
-    // Now browser starts downloading it instead of just showing it
+    //browser starts downloading it 
     var newData = imageData.replace("data:application/octet-stream");
     $("#download").attr("download", "image.png").attr("href", newData);
   });
