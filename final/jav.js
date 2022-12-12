@@ -1,4 +1,5 @@
 //https://youtu.be/C22hQKE_32c for drag and drop tutorial
+//https://stackoverflow.com/questions/18581379/how-to-save-the-contents-of-a-div-as-a-image for save button
 
 
 const theButton = document.querySelector('button');
@@ -9,6 +10,9 @@ const fill = document.querySelectorAll('.fill');
 const empties = document.querySelectorAll('.empty');
 
 var pics1 = new Array ();
+var backgrounds = new Array();
+
+//array of images for the assets
 
 pics1[0] = new Image;
 pics1[0].src = 'assets/1.png';
@@ -211,12 +215,40 @@ pics1[98].src = 'assets/99.png';
 pics1[99] = new Image;
 pics1[99].src = 'assets/100.png';
 
+//array of background images
+backgrounds[0] = new Image;
+backgrounds[0].src = 'backgrounds/1.jpg';
+backgrounds[1] = new Image;
+backgrounds[1].src = 'backgrounds/2.jpg';
+backgrounds[2] = new Image;
+backgrounds[2].src = 'backgrounds/3.jpg';
+backgrounds[3] = new Image;
+backgrounds[3].src = 'backgrounds/4.jpg';
+backgrounds[4] = new Image;
+backgrounds[4].src = 'backgrounds/5.jpg';
+backgrounds[5] = new Image;
+backgrounds[5].src = 'backgrounds/6.jpg';
+backgrounds[6] = new Image;
+backgrounds[6].src = 'backgrounds/7.jpg';
+backgrounds[7] = new Image;
+backgrounds[7].src = 'backgrounds/8.jpg';
+backgrounds[8] = new Image;
+backgrounds[8].src = 'backgrounds/9.jpg';
+backgrounds[9] = new Image;
+backgrounds[9].src = 'backgrounds/10.jpg';
+backgrounds[10] = new Image;
+backgrounds[10].src = 'backgrounds/11.jpg';
+backgrounds[11] = new Image;
+backgrounds[11].src = 'backgrounds/12.jpg';
+
 
 theButton.addEventListener('click', getImages);
 
 function getImages (){
+    //creating a copy of og array 
     var pics2 = pics1.slice()
 
+    //randomly getting a pic from the array and then removing it from the copy so there are no repeats
     var random_num = Math.floor(Math.random() * pics2.length)
     var rand = pics2[random_num];
     document.getElementById("theImg").src = rand.src;
@@ -266,6 +298,10 @@ function getImages (){
     var randup = pics2[random_num];
     document.getElementById("theImg9").src = randup.src;
     pics2.splice(random_num, 1)
+
+    //trying to randomly change background but it isnt working
+    var random_slay = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+    document.getElementById("bruh").style.backgroundImage = random_slay.url;
   }
 
 //Fill listeners
@@ -289,8 +325,9 @@ function dragStart(){
   this.className += ' hold';
   setTimeout(() => this.className = 'invisible', 0);
   console.log(this)
-
+  
 }
+
 
 function dragEnd(){
   this.className = 'fill'
@@ -299,8 +336,14 @@ function dragEnd(){
 
 function dragOver(e){
   e.preventDefault();
+  var x = e.clientX; 
+  var y = e.clientY; 
+  image.style.marginLeft  = x+"px";
+  image.style.marginTop  = y+"px";
   console.log('over')
+  
 }
+
 
 function dragEnter(e){
   e.preventDefault();
@@ -310,14 +353,40 @@ function dragEnter(e){
 
 function dragLeave(){
   this.className = 'empty';
-  console.log('leave')
 }
 
-function dragDrop(){
+function dragDrop(e){
   this.className = 'empty';
   for (const image of fill) {
     if (image.className == 'invisible') {
-      this.append(image)
+      //trying to make it so you get to drop the image where your mouse is but not quite working yet
+      var x = e.clientX; 
+      var y = e.clientY; 
+      image.style.marginLeft  = x+"px";
+      image.style.marginTop  = y+"px";
+      image.style.position = 'absolute';
+      this.append(image);
+    }
     }
   }
-}
+
+
+  var element = $("#bruh"); // global variable
+  var getCanvas; // global variable
+  $('document').ready(function(){
+    html2canvas(element, {
+      onrendered: function (canvas) {
+        $("#previewImage").append(canvas);
+        getCanvas = canvas;
+      }
+    });
+  });
+  $("#download").on('click', function () {
+    var imgageData = getCanvas.toDataURL("image/png");
+    // Now browser starts downloading it instead of just showing it
+    var newData = imageData.replace("data:application/octet-stream");
+    $("#download").attr("download", "image.png").attr("href", newData);
+  });
+
+
+
