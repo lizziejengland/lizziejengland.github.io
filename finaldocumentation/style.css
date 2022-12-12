@@ -4,8 +4,15 @@ body {
 
 h2 {
     text-align: center;
+    font-size: 60px;
 }
 
 p {
+    text-align: center;
+    font-size: 35px;
+}
+
+div{
+    justify-content: center;
     text-align: center;
 }
