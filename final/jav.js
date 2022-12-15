@@ -3,6 +3,7 @@
 
 
 const theButton = document.querySelector('button');
+const aButton = document.getElementById('reset');
 console.log(theButton);
 let theMain = document.querySelector('main');
 let theImg = document.getElementById('theImg');
@@ -301,8 +302,10 @@ function getImages (){
 
     //trying to randomly change background but it isnt working
     var random_slay = backgrounds[Math.floor(Math.random() * backgrounds.length)];
-    document.getElementById("bruh").style.backgroundImage = random_slay.url;
+    document.getElementById("bruh").style.backgroundImage = 'random_slay.src';
   }
+
+
 
 //Fill listeners
 for (const image of fill){
@@ -336,10 +339,10 @@ function dragEnd(){
 
 function dragOver(e){
   e.preventDefault();
-  var x = e.clientX; 
+  /*var x = e.clientX; 
   var y = e.clientY; 
   image.style.marginLeft  = x+"px";
-  image.style.marginTop  = y+"px";
+  image.style.marginTop  = y+"px";*/
   console.log('over')
   
 }
@@ -366,27 +369,19 @@ function dragDrop(e){
       image.style.marginTop  = y+"px";
       image.style.position = 'absolute';
       this.append(image);
+      console.log(this);
     }
+    }
+  } 
+
+aButton.addEventListener('click', resetImages);
+
+  function resetImages(){
+    this.className = 'fill'
+    for(const image of fill){
+      this.append(image);
+
     }
   }
-
-
-  var element = $("#bruh"); // global variable
-  var getCanvas; // global variable
-  $('document').ready(function(){
-    html2canvas(element, {
-      onrendered: function (canvas) {
-        $("#previewImage").append(canvas);
-        getCanvas = canvas;
-      }
-    });
-  });
-  $("#download").on('click', function () {
-    var imgageData = getCanvas.toDataURL("image/png");
-    //browser starts downloading it 
-    var newData = imageData.replace("data:application/octet-stream");
-    $("#download").attr("download", "image.png").attr("href", newData);
-  });
-
 
 

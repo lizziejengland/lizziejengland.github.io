@@ -9,6 +9,8 @@ h1{
 
 body{
     background-color: rgb(199, 225, 248);
+    justify-content: center;
+    text-align: center;
 }
 
 p{
@@ -16,7 +18,7 @@ p{
     color: rgb(60, 85, 212);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-style: italic;
-    font-size: 45px;
+    font-size: 25px;
 }
 
 button {
@@ -26,13 +28,21 @@ button {
     height: 25%;
     margin-top: 10px;
     padding: 10px 0;
-    background: white;
-    border: 0;
-    outline: none;
     font-size: 30px;
     border-radius: 15px;
     background-color: aliceblue;
     color:  rgb(60, 85, 212);
+    border-radius: 10px;
+    border: 4px double rgb(60, 85, 212);
+    border-style: outset;
+}
+button:hover{
+    background-color: rgb(208, 225, 242);
+    border-radius: 10px;
+    border: 4px double rgb(101, 119, 211);
+    border-style: inset;
+    transition: all 0.2s;
+
 }
 
 img{
@@ -45,7 +55,7 @@ img{
     height: 500px;
     width: 100%;
     margin: 10px;
-    border: 3px rgb(238, 178, 212) solid;
+    border: 3px rgb(128, 156, 227) solid;
 
 
 }
@@ -76,7 +86,7 @@ img{
     height: 400px;
     width: 50%;
     margin: 10px;
-    border: 3px rgb(238, 178, 212) solid;
+    border: 3px rgb(128, 156, 227) solid;
     background-color: aliceblue;
     text-align: center;
 } 
@@ -84,4 +94,15 @@ img{
 #bruh{
     background-image: url('backgrounds/2.jpg'); 
     background-size: contain;
+}
+
+
+p:hover{
+    color: rgb(60, 85, 212);
+    text-shadow: 0 0 25px #ffffff, 0 0 25px #ffffff;
+}
+
+h1:hover{
+    color: rgb(60, 85, 212);
+    text-shadow: 0 0 25px #ffffff, 0 0 25px #ffffff;
 }
